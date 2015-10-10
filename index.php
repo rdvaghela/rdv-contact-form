@@ -5,11 +5,11 @@
  * @version rdv contact-form 1.0
  * @author rdvaghela <rdvaghela.developer@gmail.com>
  * @link http://www.rdvaghela.com/ This is all about Rich Internet Technologies.
- * @link https://github.com/rdvaghela/contact-form/
+ * @link https://github.com/rdvaghela/rdv-contact-form/
  * @license http://opensource.org/licenses/MIT MIT License
  */
 	if(isset($_REQUEST['Name']) || isset($_REQUEST['Email']) || isset($_REQUEST['Subject']) || isset($_REQUEST['Message'])) {
-	   $to = "receiver@gmail.com";
+	   $to = "receiver@mail.com";
 	   $subject = $_REQUEST['Subject'];
 	   $message = 
                     "Name : ". $_REQUEST['Name']. "\n" . 
@@ -18,7 +18,7 @@
                     "Email : " . $_REQUEST['Subject']. "\n". 
                     "Message : ". $_REQUEST['Message'];
 				
-	   $header = "From: rdvaghela.developer@gmail.com";
+	   $header = "From: senderr@mail.com";
 	   $retval = mail ($to,$subject,$message, $header);
 	   
 	   if($retval == TRUE) {
